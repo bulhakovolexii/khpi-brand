@@ -1,0 +1,110 @@
+{
+  "type": {
+    "family": {
+      "$type": "fontFamily",
+      "$value": "{font.family.sans}",
+      "$description": "Гарнітура контексту. Брендбук, с. 15."
+    },
+    "title": {
+      "size": {
+        "$type": "dimension",
+        "$value": {
+          "value": 72,
+          "unit": "px"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Кегль заголовка."
+      },
+      "line-height": {
+        "$type": "dimension",
+        "$value": {
+          "value": 80,
+          "unit": "px"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Міжрядковий інтервал заголовка."
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.semibold}",
+        "$description": "SemiBold для виділення. Брендбук, с. 15."
+      }
+    },
+    "body": {
+      "size": {
+        "$type": "dimension",
+        "$value": {
+          "value": 44,
+          "unit": "px"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Кегль основного тексту."
+      },
+      "line-height": {
+        "$type": "dimension",
+        "$value": {
+          "value": 56,
+          "unit": "px"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Міжрядковий інтервал тексту."
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.regular}",
+        "$description": "Regular для основного тексту. Брендбук, с. 15."
+      }
+    },
+    "label": {
+      "size": {
+        "$type": "dimension",
+        "$value": {
+          "value": 36,
+          "unit": "px"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Кегль підпису."
+      },
+      "line-height": {
+        "$type": "dimension",
+        "$value": {
+          "value": 44,
+          "unit": "px"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Міжрядковий інтервал підпису."
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.semibold}",
+        "$description": "Похідне, відсутнє в брендбуку. Підписи — SemiBold."
+      }
+    },
+    "min-size": {
+      "$type": "dimension",
+      "$value": {
+        "value": 36,
+        "unit": "px"
+      },
+      "$description": "Похідне, відсутнє в брендбуку. Мінімальний дозволений кегль у цьому контексті."
+    }
+  },
+  "layout": {
+    "gap": {
+      "$type": "dimension",
+      "$value": {
+        "value": 48,
+        "unit": "px"
+      },
+      "$description": "Похідне, відсутнє в брендбуку. Базовий проміжок між блоками."
+    },
+    "safe-margin": {
+      "$type": "dimension",
+      "$value": {
+        "value": 96,
+        "unit": "px"
+      },
+      "$description": "Похідне, відсутнє в брендбуку. Безпечна зона з усіх боків на полотні 1920×1080."
+    },
+    "safe-bottom-ratio": {
+      "$type": "number",
+      "$value": 0.2,
+      "$description": "Похідне, відсутнє в брендбуку. Додатково 20 % висоти знизу під субтитри."
+    }
+  },
+  "$description": "Контекст «video»: відео 1920×1080 (Remotion)."
+}

@@ -1,0 +1,871 @@
+{
+  "$schema": "./rules.schema.json",
+  "version": "0.1.0",
+  "sources": {
+    "brandbook": "Керівництво з використання фірмового стилю НТУ «ХПІ», версія 2.1",
+    "derived": "похідне, відсутнє в брендбуку"
+  },
+  "contrast": [
+    {
+      "id": "contrast.light.ink-on-surface",
+      "severity": "error",
+      "description": "[light] Текст «ink» на «surface»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.ink-on-surface-raised",
+      "severity": "error",
+      "description": "[light] Текст «ink» на «surface-raised»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "ink",
+      "background": "surface-raised",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.ink-on-brand-subtle",
+      "severity": "error",
+      "description": "[light] Текст «ink» на «brand-subtle»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "ink",
+      "background": "brand-subtle",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.ink-muted-on-surface",
+      "severity": "error",
+      "description": "[light] Текст «ink-muted» на «surface»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "ink-muted",
+      "background": "surface",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.ink-muted-on-surface-raised",
+      "severity": "error",
+      "description": "[light] Текст «ink-muted» на «surface-raised»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "ink-muted",
+      "background": "surface-raised",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.ink-muted-on-brand-subtle",
+      "severity": "error",
+      "description": "[light] Текст «ink-muted» на «brand-subtle»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "ink-muted",
+      "background": "brand-subtle",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.brand-on-surface",
+      "severity": "error",
+      "description": "[light] Текст «brand» на «surface»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "brand",
+      "background": "surface",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.brand-on-surface-raised",
+      "severity": "error",
+      "description": "[light] Текст «brand» на «surface-raised»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "brand",
+      "background": "surface-raised",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.brand-on-brand-subtle",
+      "severity": "error",
+      "description": "[light] Текст «brand» на «brand-subtle»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "brand",
+      "background": "brand-subtle",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.accent-blue-text-on-surface",
+      "severity": "error",
+      "description": "[light] Текст «accent-blue-text» на «surface»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "accent-blue-text",
+      "background": "surface",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.on-brand-on-brand-solid",
+      "severity": "error",
+      "description": "[light] Текст «on-brand» на «brand-solid»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "on-brand",
+      "background": "brand-solid",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.on-accent-on-accent-yellow",
+      "severity": "error",
+      "description": "[light] Текст «on-accent» на «accent-yellow»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "on-accent",
+      "background": "accent-yellow",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.on-accent-on-accent-blue",
+      "severity": "error",
+      "description": "[light] Текст «on-accent» на «accent-blue»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "on-accent",
+      "background": "accent-blue",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.light.border-strong-on-surface",
+      "severity": "error",
+      "description": "[light] Елемент «border-strong» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "border-strong",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.light.border-strong-on-surface-raised",
+      "severity": "error",
+      "description": "[light] Елемент «border-strong» на «surface-raised»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "border-strong",
+      "background": "surface-raised",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.light.data-1-on-surface",
+      "severity": "warning",
+      "description": "[light] Елемент «data-1» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "data-1",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.light.data-2-on-surface",
+      "severity": "warning",
+      "description": "[light] Елемент «data-2» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "data-2",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.light.data-3-on-surface",
+      "severity": "warning",
+      "description": "[light] Елемент «data-3» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "data-3",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.light.data-4-on-surface",
+      "severity": "warning",
+      "description": "[light] Елемент «data-4» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "light",
+      "foreground": "data-4",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.dark.ink-on-surface",
+      "severity": "error",
+      "description": "[dark] Текст «ink» на «surface»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.ink-on-surface-raised",
+      "severity": "error",
+      "description": "[dark] Текст «ink» на «surface-raised»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "ink",
+      "background": "surface-raised",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.ink-on-brand-subtle",
+      "severity": "error",
+      "description": "[dark] Текст «ink» на «brand-subtle»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "ink",
+      "background": "brand-subtle",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.ink-muted-on-surface",
+      "severity": "error",
+      "description": "[dark] Текст «ink-muted» на «surface»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "ink-muted",
+      "background": "surface",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.ink-muted-on-surface-raised",
+      "severity": "error",
+      "description": "[dark] Текст «ink-muted» на «surface-raised»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "ink-muted",
+      "background": "surface-raised",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.ink-muted-on-brand-subtle",
+      "severity": "error",
+      "description": "[dark] Текст «ink-muted» на «brand-subtle»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "ink-muted",
+      "background": "brand-subtle",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.brand-on-surface",
+      "severity": "error",
+      "description": "[dark] Текст «brand» на «surface»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "brand",
+      "background": "surface",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.brand-on-surface-raised",
+      "severity": "error",
+      "description": "[dark] Текст «brand» на «surface-raised»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "brand",
+      "background": "surface-raised",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.brand-on-brand-subtle",
+      "severity": "error",
+      "description": "[dark] Текст «brand» на «brand-subtle»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "brand",
+      "background": "brand-subtle",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.accent-blue-text-on-surface",
+      "severity": "error",
+      "description": "[dark] Текст «accent-blue-text» на «surface»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "accent-blue-text",
+      "background": "surface",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.accent-blue-text-on-surface-raised",
+      "severity": "error",
+      "description": "[dark] Текст «accent-blue-text» на «surface-raised»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "accent-blue-text",
+      "background": "surface-raised",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.accent-blue-text-on-brand-subtle",
+      "severity": "error",
+      "description": "[dark] Текст «accent-blue-text» на «brand-subtle»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "accent-blue-text",
+      "background": "brand-subtle",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.on-brand-on-brand-solid",
+      "severity": "error",
+      "description": "[dark] Текст «on-brand» на «brand-solid»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "on-brand",
+      "background": "brand-solid",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.on-accent-on-accent-yellow",
+      "severity": "error",
+      "description": "[dark] Текст «on-accent» на «accent-yellow»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "on-accent",
+      "background": "accent-yellow",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.on-accent-on-accent-blue",
+      "severity": "error",
+      "description": "[dark] Текст «on-accent» на «accent-blue»: контраст не менше 4.5:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "on-accent",
+      "background": "accent-blue",
+      "min": 4.5,
+      "kind": "text"
+    },
+    {
+      "id": "contrast.dark.border-strong-on-surface",
+      "severity": "error",
+      "description": "[dark] Елемент «border-strong» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "border-strong",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.dark.border-strong-on-surface-raised",
+      "severity": "error",
+      "description": "[dark] Елемент «border-strong» на «surface-raised»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "border-strong",
+      "background": "surface-raised",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.dark.data-1-on-surface",
+      "severity": "warning",
+      "description": "[dark] Елемент «data-1» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "data-1",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.dark.data-2-on-surface",
+      "severity": "warning",
+      "description": "[dark] Елемент «data-2» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "data-2",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.dark.data-3-on-surface",
+      "severity": "warning",
+      "description": "[dark] Елемент «data-3» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "data-3",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    },
+    {
+      "id": "contrast.dark.data-4-on-surface",
+      "severity": "warning",
+      "description": "[dark] Елемент «data-4» на «surface»: контраст не менше 3:1.",
+      "source": "похідне, відсутнє в брендбуку",
+      "theme": "dark",
+      "foreground": "data-4",
+      "background": "surface",
+      "min": 3,
+      "kind": "non-text"
+    }
+  ],
+  "usage": [
+    {
+      "id": "usage.accent-yellow.fill-only",
+      "severity": "error",
+      "description": "accent-yellow — лише заливка, маркер, смуга. Як колір тексту заборонено (1.7:1 на білому).",
+      "source": "Брендбук, с. 14; контраст — похідне, відсутнє в брендбуку",
+      "kind": "role",
+      "role": "accent-yellow",
+      "forbiddenUses": [
+        "text",
+        "border-text"
+      ],
+      "onlyAs": [
+        "fill",
+        "marker"
+      ]
+    },
+    {
+      "id": "usage.accent-blue.fill-only",
+      "severity": "error",
+      "description": "accent-blue — лише заливка, маркер, смуга. Для тексту є accent-blue-text (2.5:1 на білому в чистого блакитного).",
+      "source": "Брендбук, с. 14; контраст — похідне, відсутнє в брендбуку",
+      "kind": "role",
+      "role": "accent-blue",
+      "forbiddenUses": [
+        "text"
+      ],
+      "onlyAs": [
+        "fill",
+        "marker"
+      ]
+    },
+    {
+      "id": "usage.brand-solid.fill-only",
+      "severity": "error",
+      "description": "brand-solid — заливка (кнопка, смуга, фон блока) з текстом on-brand. Як колір тексту на темному surface заборонено (1.7:1); для тексту є роль brand.",
+      "source": "Брендбук, с. 14; контраст — похідне, відсутнє в брендбуку",
+      "kind": "role",
+      "role": "brand-solid",
+      "forbiddenUses": [
+        "text"
+      ],
+      "onlyAs": [
+        "fill"
+      ],
+      "themes": [
+        "dark"
+      ]
+    },
+    {
+      "id": "usage.brand-solid.text-light",
+      "severity": "warning",
+      "description": "brand-solid як колір тексту на світлому surface працює (8.4:1), але для тексту використовуйте роль brand, щоб тема перемикалась коректно.",
+      "source": "похідне, відсутнє в брендбуку",
+      "kind": "role",
+      "role": "brand-solid",
+      "forbiddenUses": [
+        "text"
+      ],
+      "themes": [
+        "light"
+      ]
+    },
+    {
+      "id": "usage.light.no-accent-blue-text-on-surface-raised",
+      "severity": "error",
+      "description": "[light] Роль «accent-blue-text» не використовувати як колір тексту на «surface-raised»: контраст 4.35:1 < 4.5.",
+      "source": "похідне, відсутнє в брендбуку",
+      "kind": "forbidden-pair",
+      "theme": "light",
+      "foreground": "accent-blue-text",
+      "background": "surface-raised",
+      "uses": [
+        "text"
+      ]
+    },
+    {
+      "id": "usage.light.no-accent-blue-text-on-brand-subtle",
+      "severity": "error",
+      "description": "[light] Роль «accent-blue-text» не використовувати як колір тексту на «brand-subtle»: контраст 4.01:1 < 4.5.",
+      "source": "похідне, відсутнє в брендбуку",
+      "kind": "forbidden-pair",
+      "theme": "light",
+      "foreground": "accent-blue-text",
+      "background": "brand-subtle",
+      "uses": [
+        "text"
+      ]
+    }
+  ],
+  "typography": [
+    {
+      "id": "typography.weights",
+      "severity": "error",
+      "description": "Дозволені ваги Fira Sans: 400 (Regular, текст) і 600 (SemiBold, виділення).",
+      "source": "Брендбук, с. 15",
+      "rule": "allowed-weights",
+      "values": [
+        400,
+        600
+      ]
+    },
+    {
+      "id": "typography.max-variants",
+      "severity": "error",
+      "description": "Не більше 2 варіантів шрифта в одному матеріалі (тобто ваги 400 і 600).",
+      "source": "Брендбук, с. 15",
+      "rule": "max-variants",
+      "value": 2
+    },
+    {
+      "id": "typography.families",
+      "severity": "error",
+      "description": "Дозволені гарнітури: Fira Sans (універсальний), Times New Roman (офіційні документи), Cambria (менш формальні друковані матеріали). Варіант 2 брендбуку (Ledger + Arial) не використовуємо. Загальні запасні (sans-serif, serif) і системні Helvetica Neue/Arial/Times/Georgia допустимі лише як fallback у стеку.",
+      "source": "Брендбук, с. 15–16; рішення щодо варіанта 2 — похідне, відсутнє в брендбуку",
+      "rule": "allowed-families",
+      "values": [
+        "Fira Sans",
+        "Times New Roman",
+        "Cambria"
+      ],
+      "fallbacks": [
+        "Helvetica Neue",
+        "Arial",
+        "Times",
+        "Georgia",
+        "sans-serif",
+        "serif",
+        "system-ui",
+        "inherit"
+      ]
+    },
+    {
+      "id": "typography.min-size.slide",
+      "severity": "error",
+      "description": "Слайд (1920×1080): мінімальний кегль 28 px.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "min-size",
+      "context": "slide",
+      "value": 28,
+      "unit": "px"
+    },
+    {
+      "id": "typography.min-size.video",
+      "severity": "error",
+      "description": "Відео (1920×1080): мінімальний кегль 36 px.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "min-size",
+      "context": "video",
+      "value": 36,
+      "unit": "px"
+    },
+    {
+      "id": "typography.min-size.doc",
+      "severity": "warning",
+      "description": "Документ і вебсторінка: мінімальний кегль 14 px (розмір підпису).",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "min-size",
+      "context": "doc",
+      "value": 14,
+      "unit": "px"
+    },
+    {
+      "id": "typography.min-size.print",
+      "severity": "warning",
+      "description": "Друк (Times New Roman): мінімальний кегль 14 pt.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "min-size",
+      "context": "print",
+      "value": 14,
+      "unit": "pt"
+    },
+    {
+      "id": "typography.measure.doc",
+      "severity": "warning",
+      "description": "Довжина рядка в документі до 70 знаків.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "max-measure",
+      "context": "doc",
+      "value": 70,
+      "unit": "ch"
+    },
+    {
+      "id": "typography.sizes-from-tokens",
+      "severity": "warning",
+      "description": "Кегль і міжрядковий інтервал беруть зі змінних --khpi-type-* для обраного контексту, а не прописують пікселями.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "sizes-from-tokens"
+    }
+  ],
+  "logo": [
+    {
+      "id": "logo.backgrounds",
+      "severity": "error",
+      "description": "Прямі версії (контурні) — лише на білому або світлому фоні; інверсна бордова — на бордовому (brand-solid); інверсна графітова — на графітовому (surface темної теми). Корпус не інвертується, фон знака лишається білим.",
+      "source": "Брендбук, с. 6–8",
+      "rule": "allowed-backgrounds",
+      "variants": {
+        "emblem-direct-graphite": [
+          "surface",
+          "surface-raised",
+          "brand-subtle"
+        ],
+        "emblem-direct-brand": [
+          "surface",
+          "surface-raised",
+          "brand-subtle"
+        ],
+        "block-direct-graphite": [
+          "surface",
+          "surface-raised",
+          "brand-subtle"
+        ],
+        "block-direct-brand": [
+          "surface",
+          "surface-raised",
+          "brand-subtle"
+        ],
+        "emblem-inverse-brand": [
+          "brand-solid"
+        ],
+        "block-inverse-brand": [
+          "brand-solid"
+        ],
+        "emblem-inverse-graphite": [
+          "surface:dark"
+        ],
+        "block-inverse-graphite": [
+          "surface:dark"
+        ]
+      },
+      "note": "Токени ролей. «surface:dark» — роль surface у темній темі (графіт). У світлій темі surface-ролі білі/світлі."
+    },
+    {
+      "id": "logo.colors",
+      "severity": "error",
+      "description": "Емблема й блок виконуються лише фірмовими кольорами (бордовий, графіт, білий); не перефарбовувати, крім монохромного дизайну чи технічних умов друку.",
+      "source": "Брендбук, с. 7, 13 (п. 1)",
+      "rule": "brand-colors-only"
+    },
+    {
+      "id": "logo.clearspace",
+      "severity": "error",
+      "description": "Охоронне поле в кроках «x»: емблема — 1,5x; горизонтальний блок — 2x ліворуч і праворуч, x зверху і знизу. x = відстань між верхньою точкою внутрішнього кола і початком даху.",
+      "source": "Брендбук, с. 11; значення для емблеми — похідне (неоднозначна схема)",
+      "rule": "clearspace",
+      "emblem": 1.5,
+      "horizontalSide": 2,
+      "horizontalVertical": 1
+    },
+    {
+      "id": "logo.min-size",
+      "severity": "error",
+      "description": "Мінімальні розміри: велика емблема ≥ 20 мм; мала версія емблеми — від 8 до 19 мм (менше 8 мм забороняється, зокрема в мінімізованому блоці); горизонтальний блок ≥ 53 мм завширшки. Максимум: емблема 500 мм, блок з малою емблемою 115 мм. У пікселях (96 dpi): 20 мм ≈ 76 px, 8 мм ≈ 30 px, 53 мм ≈ 200 px.",
+      "source": "Брендбук, с. 12; пікселі — похідне, відсутнє в брендбуку",
+      "rule": "min-size",
+      "emblemLargeMinMm": 20,
+      "emblemSmallMinMm": 8,
+      "emblemSmallMaxMm": 19,
+      "emblemMaxMm": 500,
+      "blockMinWidthMm": 53,
+      "blockSmallEmblemMaxWidthMm": 115,
+      "pxPerMm": 3.78
+    },
+    {
+      "id": "logo.prohibited.1",
+      "severity": "error",
+      "description": "Заборонено (1): Не змінювати фірмовий колір емблеми (крім монохромного дизайну чи технічних умов друку).",
+      "source": "Брендбук, с. 13, п. 1",
+      "rule": "prohibition",
+      "number": 1,
+      "check": "static"
+    },
+    {
+      "id": "logo.prohibited.2",
+      "severity": "error",
+      "description": "Заборонено (2): Не використовувати шрифт, що не є частиною фірмового стилю.",
+      "source": "Брендбук, с. 13, п. 2",
+      "rule": "prohibition",
+      "number": 2,
+      "check": "manual"
+    },
+    {
+      "id": "logo.prohibited.3",
+      "severity": "error",
+      "description": "Заборонено (3): Не змінювати пропорції та розташування елементів фірмового блоку.",
+      "source": "Брендбук, с. 13, п. 3",
+      "rule": "prohibition",
+      "number": 3,
+      "check": "manual"
+    },
+    {
+      "id": "logo.prohibited.4",
+      "severity": "error",
+      "description": "Заборонено (4): Не використовувати знак, що відрізняється від затвердженого.",
+      "source": "Брендбук, с. 13, п. 4",
+      "rule": "prohibition",
+      "number": 4,
+      "check": "manual"
+    },
+    {
+      "id": "logo.prohibited.5",
+      "severity": "error",
+      "description": "Заборонено (5): Не видозмінювати форми елементів фірмового блоку.",
+      "source": "Брендбук, с. 13, п. 5",
+      "rule": "prohibition",
+      "number": 5,
+      "check": "manual"
+    },
+    {
+      "id": "logo.prohibited.6",
+      "severity": "error",
+      "description": "Заборонено (6): Фон має бути контрастним до символіки.",
+      "source": "Брендбук, с. 13, п. 6",
+      "rule": "prohibition",
+      "number": 6,
+      "check": "static"
+    },
+    {
+      "id": "logo.prohibited.7",
+      "severity": "error",
+      "description": "Заборонено (7): Не ускладнювати читання символіки нерозбірливим і різнорідним фоном (фото, візерунок).",
+      "source": "Брендбук, с. 13, п. 7",
+      "rule": "prohibition",
+      "number": 7,
+      "check": "static"
+    },
+    {
+      "id": "logo.prohibited.8",
+      "severity": "warning",
+      "description": "Заборонено (8): Не видозмінювати символіку до видимих втрат якості (артефакти стиснення): використовувати SVG, не растр.",
+      "source": "Брендбук, с. 13, п. 8",
+      "rule": "prohibition",
+      "number": 8,
+      "check": "manual"
+    }
+  ],
+  "shape": [
+    {
+      "id": "shape.radius-max",
+      "severity": "error",
+      "description": "Заокруглення — 0, 2, 4 px; 9999 лише для кіл. Більше 4 px не використовувати (строгий стиль).",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "radius-max",
+      "value": 4,
+      "allowedValues": [
+        0,
+        2,
+        4
+      ],
+      "circleValue": 9999
+    },
+    {
+      "id": "shape.no-shadow",
+      "severity": "error",
+      "description": "Тіні (box-shadow, drop-shadow, text-shadow) заборонені: їх немає в токенах. Піднята поверхня виражається роллю surface-raised і межею.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "no-shadow"
+    },
+    {
+      "id": "shape.no-gradient",
+      "severity": "error",
+      "description": "Градієнти заборонені: їх немає в токенах.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "no-gradient"
+    },
+    {
+      "id": "shape.no-new-colors",
+      "severity": "error",
+      "description": "Кольори лише з токенів: не прописувати hex/rgb/hsl/іменовані кольори, не вигадувати нових.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "tokens-only-colors"
+    },
+    {
+      "id": "shape.spacing-scale",
+      "severity": "warning",
+      "description": "Відступи лише з кроків 4, 8, 16, 24, 32, 48, 64 px (змінні --khpi-space-*).",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "spacing-scale",
+      "values": [
+        4,
+        8,
+        16,
+        24,
+        32,
+        48,
+        64
+      ]
+    }
+  ],
+  "motion": [
+    {
+      "id": "motion.durations",
+      "severity": "warning",
+      "description": "Тривалості: 150, 300, 600 мс; stagger 80 мс; повна анімація блока до 2400 мс.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "durations",
+      "values": [
+        150,
+        300,
+        600
+      ],
+      "stagger": 80,
+      "blockMax": 2400
+    },
+    {
+      "id": "motion.shift-max",
+      "severity": "warning",
+      "description": "Зсув при анімації до 12 px; лише прозорість і зсув; без пружин і відскоків.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "shift-max",
+      "value": 12
+    },
+    {
+      "id": "motion.reduced",
+      "severity": "error",
+      "description": "Поважати prefers-reduced-motion: одразу кінцевий стан.",
+      "source": "похідне, відсутнє в брендбуку",
+      "rule": "reduced-motion"
+    }
+  ]
+}

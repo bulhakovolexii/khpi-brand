@@ -1,0 +1,193 @@
+/* khpi-brand 0.1.0. Згенеровано з tokens/ (npm run build). Не редагувати вручну.
+ * Використання: <html data-theme="light|dark" data-mode="doc|slide|video|print">.
+ * Без атрибутів: тема за prefers-color-scheme, контекст doc. */
+
+/* Палітра, шрифти, відступи, заокруглення, рух */
+:root {
+  --khpi-palette-white: #FFFFFF;
+  --khpi-palette-brand-40: #D999A4;
+  --khpi-palette-brand-60: #C66676;
+  --khpi-palette-brand-75: #B84054;
+  --khpi-palette-brand-100: #A0001B;
+  --khpi-palette-yellow-40: #FDE399;
+  --khpi-palette-yellow-60: #FDD666;
+  --khpi-palette-yellow-75: #FCCB40;
+  --khpi-palette-yellow-100: #FBBA00;
+  --khpi-palette-blue-40: #B2E0E9;
+  --khpi-palette-blue-60: #8BD0DE;
+  --khpi-palette-blue-75: #6EC4D6;
+  --khpi-palette-blue-100: #3EB1C8;
+  --khpi-palette-graphite-40: #AAAAAA;
+  --khpi-palette-graphite-60: #7F7F7F;
+  --khpi-palette-graphite-75: #5F5F5F;
+  --khpi-palette-graphite-100: #2A2A2A;
+  --khpi-palette-derived-gray-50: #F7F7F7;
+  --khpi-palette-derived-gray-100: #E5E5E5;
+  --khpi-palette-derived-gray-150: #ECECEC;
+  --khpi-palette-derived-gray-700: #4A4A4A;
+  --khpi-palette-derived-gray-800: #333333;
+  --khpi-palette-derived-brand-tint: #F7EBED;
+  --khpi-palette-derived-brand-shade: #3D2A2D;
+  --khpi-palette-derived-blue-text: #1D7F93;
+  --khpi-font-family-sans: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
+  --khpi-font-family-doc: 'Times New Roman', Times, serif;
+  --khpi-font-family-soft: Cambria, Georgia, serif;
+  --khpi-font-weight-regular: 400;
+  --khpi-font-weight-semibold: 600;
+  --khpi-logo-clearspace-emblem: 1.5;
+  --khpi-logo-clearspace-horizontal-side: 2;
+  --khpi-logo-clearspace-horizontal-vertical: 1;
+  --khpi-space-4: 4px;
+  --khpi-space-8: 8px;
+  --khpi-space-16: 16px;
+  --khpi-space-24: 24px;
+  --khpi-space-32: 32px;
+  --khpi-space-48: 48px;
+  --khpi-space-64: 64px;
+  --khpi-radius-0: 0px;
+  --khpi-radius-2: 2px;
+  --khpi-radius-4: 4px;
+  --khpi-radius-full: 9999px;
+  --khpi-motion-duration-fast: 150ms;
+  --khpi-motion-duration-base: 300ms;
+  --khpi-motion-duration-slow: 600ms;
+  --khpi-motion-duration-stagger: 80ms;
+  --khpi-motion-duration-block: 2400ms;
+  --khpi-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --khpi-motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --khpi-motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --khpi-motion-shift-max: 12px;
+}
+
+/* Тема (ролі) */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --khpi-color-brand-solid: #A0001B;
+  --khpi-color-on-brand: #FFFFFF;
+  --khpi-color-accent-yellow: #FBBA00;
+  --khpi-color-accent-blue: #3EB1C8;
+  --khpi-color-data-1: #A0001B;
+  --khpi-color-data-2: #3EB1C8;
+  --khpi-color-data-3: #FBBA00;
+  --khpi-color-data-4: #5F5F5F;
+  --khpi-color-on-accent: #2A2A2A;
+  --khpi-color-surface: #FFFFFF;
+  --khpi-color-surface-raised: #F7F7F7;
+  --khpi-color-ink: #2A2A2A;
+  --khpi-color-ink-muted: #5F5F5F;
+  --khpi-color-border: #E5E5E5;
+  --khpi-color-border-strong: #7F7F7F;
+  --khpi-color-brand: #A0001B;
+  --khpi-color-brand-subtle: #F7EBED;
+  --khpi-color-accent-blue-text: #1D7F93;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --khpi-color-brand-solid: #A0001B;
+  --khpi-color-on-brand: #FFFFFF;
+  --khpi-color-accent-yellow: #FBBA00;
+  --khpi-color-accent-blue: #3EB1C8;
+  --khpi-color-data-1: #D999A4;
+  --khpi-color-data-2: #3EB1C8;
+  --khpi-color-data-3: #FBBA00;
+  --khpi-color-data-4: #AAAAAA;
+  --khpi-color-on-accent: #2A2A2A;
+  --khpi-color-surface: #2A2A2A;
+  --khpi-color-surface-raised: #333333;
+  --khpi-color-ink: #ECECEC;
+  --khpi-color-ink-muted: #AAAAAA;
+  --khpi-color-border: #4A4A4A;
+  --khpi-color-border-strong: #7F7F7F;
+  --khpi-color-brand: #D999A4;
+  --khpi-color-brand-subtle: #3D2A2D;
+  --khpi-color-accent-blue-text: #6EC4D6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --khpi-color-brand-solid: #A0001B;
+    --khpi-color-on-brand: #FFFFFF;
+    --khpi-color-accent-yellow: #FBBA00;
+    --khpi-color-accent-blue: #3EB1C8;
+    --khpi-color-data-1: #D999A4;
+    --khpi-color-data-2: #3EB1C8;
+    --khpi-color-data-3: #FBBA00;
+    --khpi-color-data-4: #AAAAAA;
+    --khpi-color-on-accent: #2A2A2A;
+    --khpi-color-surface: #2A2A2A;
+    --khpi-color-surface-raised: #333333;
+    --khpi-color-ink: #ECECEC;
+    --khpi-color-ink-muted: #AAAAAA;
+    --khpi-color-border: #4A4A4A;
+    --khpi-color-border-strong: #7F7F7F;
+    --khpi-color-brand: #D999A4;
+    --khpi-color-brand-subtle: #3D2A2D;
+    --khpi-color-accent-blue-text: #6EC4D6;
+  }
+}
+
+/* Контекст (формат). doc — за замовчуванням. print змінює лише гарнітуру та основний кегль. */
+:root,
+[data-mode="doc"] {
+  --khpi-type-family: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
+  --khpi-type-title-size: 24px;
+  --khpi-type-title-line-height: 32px;
+  --khpi-type-title-weight: 600;
+  --khpi-type-body-size: 17px;
+  --khpi-type-body-line-height: 28px;
+  --khpi-type-body-weight: 400;
+  --khpi-type-label-size: 14px;
+  --khpi-type-label-line-height: 20px;
+  --khpi-type-label-weight: 600;
+  --khpi-type-min-size: 14px;
+  --khpi-layout-gap: 16px;
+  --khpi-layout-measure: 70;
+}
+[data-mode="slide"] {
+  --khpi-type-family: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
+  --khpi-type-title-size: 64px;
+  --khpi-type-title-line-height: 72px;
+  --khpi-type-title-weight: 600;
+  --khpi-type-body-size: 36px;
+  --khpi-type-body-line-height: 48px;
+  --khpi-type-body-weight: 400;
+  --khpi-type-label-size: 28px;
+  --khpi-type-label-line-height: 36px;
+  --khpi-type-label-weight: 600;
+  --khpi-type-min-size: 28px;
+  --khpi-layout-gap: 32px;
+  --khpi-layout-margin: 80px;
+}
+[data-mode="video"] {
+  --khpi-type-family: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
+  --khpi-type-title-size: 72px;
+  --khpi-type-title-line-height: 80px;
+  --khpi-type-title-weight: 600;
+  --khpi-type-body-size: 44px;
+  --khpi-type-body-line-height: 56px;
+  --khpi-type-body-weight: 400;
+  --khpi-type-label-size: 36px;
+  --khpi-type-label-line-height: 44px;
+  --khpi-type-label-weight: 600;
+  --khpi-type-min-size: 36px;
+  --khpi-layout-gap: 48px;
+  --khpi-layout-safe-margin: 96px;
+  --khpi-layout-safe-bottom-ratio: 0.2;
+}
+[data-mode="print"] {
+  --khpi-type-family: 'Times New Roman', Times, serif;
+  --khpi-type-body-size: 14pt;
+  --khpi-type-min-size: 14pt;
+}
+
+/* prefers-reduced-motion: одразу кінцевий стан */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --khpi-motion-duration-fast: 0ms;
+    --khpi-motion-duration-base: 0ms;
+    --khpi-motion-duration-slow: 0ms;
+    --khpi-motion-duration-stagger: 0ms;
+    --khpi-motion-duration-block: 0ms;
+  }
+}

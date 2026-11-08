@@ -1,0 +1,61 @@
+/* khpi-brand 0.1.0 — Tailwind v4. Згенеровано з tokens/ (npm run build). Не редагувати вручну.
+ * Підключати ПІСЛЯ tokens.css:
+ *   @import "tailwindcss";
+ *   @import "khpi-brand/dist/css/tokens.css";
+ *   @import "khpi-brand/dist/tailwind/theme.css";
+ * Стандартну палітру, тіні й радіуси Tailwind вимкнено: бренд не передбачає інших. */
+@theme inline {
+  --color-*: initial;
+  --shadow-*: initial;
+  --drop-shadow-*: initial;
+  --inset-shadow-*: initial;
+  --radius-*: initial;
+  --font-*: initial;
+
+  --color-brand-solid: var(--khpi-color-brand-solid);
+  --color-on-brand: var(--khpi-color-on-brand);
+  --color-accent-yellow: var(--khpi-color-accent-yellow);
+  --color-accent-blue: var(--khpi-color-accent-blue);
+  --color-data.1: var(--khpi-color-data-1);
+  --color-data.2: var(--khpi-color-data-2);
+  --color-data.3: var(--khpi-color-data-3);
+  --color-data.4: var(--khpi-color-data-4);
+  --color-on-accent: var(--khpi-color-on-accent);
+  --color-surface: var(--khpi-color-surface);
+  --color-surface-raised: var(--khpi-color-surface-raised);
+  --color-ink: var(--khpi-color-ink);
+  --color-ink-muted: var(--khpi-color-ink-muted);
+  --color-border: var(--khpi-color-border);
+  --color-border-strong: var(--khpi-color-border-strong);
+  --color-brand: var(--khpi-color-brand);
+  --color-brand-subtle: var(--khpi-color-brand-subtle);
+  --color-accent-blue-text: var(--khpi-color-accent-blue-text);
+  --color-white: var(--khpi-palette-white);
+  --color-brand-40: var(--khpi-palette-brand-40);
+  --color-brand-60: var(--khpi-palette-brand-60);
+  --color-brand-75: var(--khpi-palette-brand-75);
+  --color-brand-100: var(--khpi-palette-brand-100);
+  --color-yellow-40: var(--khpi-palette-yellow-40);
+  --color-yellow-60: var(--khpi-palette-yellow-60);
+  --color-yellow-75: var(--khpi-palette-yellow-75);
+  --color-yellow-100: var(--khpi-palette-yellow-100);
+  --color-blue-40: var(--khpi-palette-blue-40);
+  --color-blue-60: var(--khpi-palette-blue-60);
+  --color-blue-75: var(--khpi-palette-blue-75);
+  --color-blue-100: var(--khpi-palette-blue-100);
+  --color-graphite-40: var(--khpi-palette-graphite-40);
+  --color-graphite-60: var(--khpi-palette-graphite-60);
+  --color-graphite-75: var(--khpi-palette-graphite-75);
+  --color-graphite-100: var(--khpi-palette-graphite-100);
+  --font-sans: var(--khpi-font-family-sans);
+  --font-doc: var(--khpi-font-family-doc);
+  --font-soft: var(--khpi-font-family-soft);
+  --spacing: 4px;
+  --radius-none: var(--khpi-radius-0);
+  --radius-sm: var(--khpi-radius-2);
+  --radius-md: var(--khpi-radius-4);
+  --radius-full: var(--khpi-radius-full);
+  --ease-standard: var(--khpi-motion-easing-standard);
+  --ease-enter: var(--khpi-motion-easing-enter);
+  --ease-exit: var(--khpi-motion-easing-exit);
+}

@@ -1,0 +1,38 @@
+{
+  "$description": "Похідне, відсутнє в брендбуку. Контекст «print»: офіційні документи. Times New Roman 14 pt (вимоги МОН, брендбук с. 15). Одиниці — pt.",
+  "type": {
+    "family": {
+      "$type": "fontFamily",
+      "$value": "{font.family.doc}",
+      "$description": "Times New Roman: офіційні документи. Брендбук, с. 15."
+    },
+    "body": {
+      "size": {
+        "$type": "dimension",
+        "$value": {
+          "value": 14,
+          "unit": "px"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. 14 pt. DTCG 2025.10 не має одиниці pt, тому значення зберігається числом; адаптери виводять його в pt.",
+        "$extensions": {
+          "khpi": {
+            "unit": "pt"
+          }
+        }
+      }
+    },
+    "min-size": {
+      "$type": "dimension",
+      "$value": {
+        "value": 14,
+        "unit": "px"
+      },
+      "$description": "Похідне, відсутнє в брендбуку. 14 pt, мінімум дорівнює основному кеглю.",
+      "$extensions": {
+        "khpi": {
+          "unit": "pt"
+        }
+      }
+    }
+  }
+}

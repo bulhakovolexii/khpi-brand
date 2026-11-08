@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://khpi-brand.local/rules.schema.json",
+  "title": "khpi-brand rules",
+  "description": "Вимоги брендбуку як дані. Кожне правило має id, severity, опис і посилання на джерело (сторінка брендбуку або «похідне, відсутнє в брендбуку»).",
+  "type": "object",
+  "required": ["version", "sources", "contrast", "usage", "typography", "logo", "shape", "motion"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "sources": { "type": "object", "required": ["brandbook", "derived"], "additionalProperties": { "type": "string" } },
+    "contrast": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/contrastRule" } },
+    "usage": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/usageRule" } },
+    "typography": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/typographyRule" } },
+    "logo": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/logoRule" } },
+    "shape": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/genericRule" } },
+    "motion": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/genericRule" } }
+  },
+  "$defs": {
+    "common": {
+      "type": "object",
+      "required": ["id", "severity", "description", "source"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z]+(\\.[a-z0-9-]+)+$" },
+        "severity": { "enum": ["error", "warning"] },
+        "description": { "type": "string", "minLength": 10 },
+        "source": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Має містити «Брендбук, с. N» або «похідне, відсутнє в брендбуку»",
+          "pattern": "(Брендбук, с\\. \\d+|похідне, відсутнє в брендбуку)"
+        }
+      }
+    },
+    "role": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "theme": { "enum": ["light", "dark"] },
+    "contrastRule": {
+      "allOf": [{ "$ref": "#/$defs/common" }],
+      "required": ["theme", "foreground", "background", "min", "kind"],
+      "properties": {
+        "theme": { "$ref": "#/$defs/theme" },
+        "foreground": { "$ref": "#/$defs/role" },
+        "background": { "$ref": "#/$defs/role" },
+        "min": { "enum": [3, 4.5] },
+        "kind": { "enum": ["text", "large-text", "non-text"] }
+      },
+      "unevaluatedProperties": false
+    },
+    "usageRule": {
+      "allOf": [{ "$ref": "#/$defs/common" }],
+      "required": ["kind"],
+      "oneOf": [
+        {
+          "properties": {
+            "kind": { "const": "role" },
+            "role": { "$ref": "#/$defs/role" },
+            "forbiddenUses": { "type": "array", "items": { "enum": ["text", "border-text", "fill", "border", "marker"] }, "minItems": 1 },
+            "onlyAs": { "type": "array", "items": { "enum": ["fill", "marker", "text", "border"] } },
+            "themes": { "type": "array", "items": { "$ref": "#/$defs/theme" }, "minItems": 1 }
+          },
+          "required": ["role", "forbiddenUses"]
+        },
+        {
+          "properties": {
+            "kind": { "const": "forbidden-pair" },
+            "theme": { "$ref": "#/$defs/theme" },
+            "foreground": { "$ref": "#/$defs/role" },
+            "background": { "$ref": "#/$defs/role" },
+            "uses": { "type": "array", "items": { "enum": ["text", "fill"] }, "minItems": 1 }
+          },
+          "required": ["theme", "foreground", "background", "uses"]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "typographyRule": {
+      "allOf": [{ "$ref": "#/$defs/common" }],
+      "required": ["rule"],
+      "properties": { "rule": { "enum": ["allowed-weights", "max-variants", "allowed-families", "min-size", "max-measure", "sizes-from-tokens"] } },
+      "oneOf": [
+        { "properties": { "rule": { "const": "allowed-weights" }, "values": { "type": "array", "items": { "type": "integer", "minimum": 100, "maximum": 900 }, "minItems": 1 } }, "required": ["values"] },
+        { "properties": { "rule": { "const": "max-variants" }, "value": { "type": "integer", "minimum": 1 } }, "required": ["value"] },
+        { "properties": { "rule": { "const": "allowed-families" }, "values": { "type": "array", "items": { "type": "string" }, "minItems": 1 }, "fallbacks": { "type": "array", "items": { "type": "string" } } }, "required": ["values"] },
+        { "properties": { "rule": { "const": "sizes-from-tokens" } } },
+        { "properties": { "rule": { "enum": ["min-size", "max-measure"] }, "context": { "enum": ["doc", "slide", "video", "print"] }, "value": { "type": "number", "exclusiveMinimum": 0 }, "unit": { "enum": ["px", "pt", "ch"] } }, "required": ["context", "value", "unit"] }
+      ],
+      "unevaluatedProperties": false
+    },
+    "logoRule": {
+      "allOf": [{ "$ref": "#/$defs/common" }],
+      "required": ["rule"],
+      "oneOf": [
+        { "properties": { "rule": { "const": "allowed-backgrounds" }, "variants": { "type": "object", "minProperties": 1, "additionalProperties": { "type": "array", "items": { "type": "string" }, "minItems": 1 } }, "note": { "type": "string" } }, "required": ["variants"] },
+        { "properties": { "rule": { "const": "brand-colors-only" } } },
+        { "properties": { "rule": { "const": "clearspace" }, "emblem": { "type": "number", "minimum": 0 }, "horizontalSide": { "type": "number", "minimum": 0 }, "horizontalVertical": { "type": "number", "minimum": 0 } }, "required": ["emblem", "horizontalSide", "horizontalVertical"] },
+        { "properties": { "rule": { "const": "min-size" }, "emblemLargeMinMm": { "type": "number" }, "emblemSmallMinMm": { "type": "number" }, "emblemSmallMaxMm": { "type": "number" }, "emblemMaxMm": { "type": "number" }, "blockMinWidthMm": { "type": "number" }, "blockSmallEmblemMaxWidthMm": { "type": "number" }, "pxPerMm": { "type": "number" } }, "required": ["emblemLargeMinMm", "emblemSmallMinMm", "blockMinWidthMm", "pxPerMm"] },
+        { "properties": { "rule": { "const": "prohibition" }, "number": { "type": "integer", "minimum": 1, "maximum": 8 }, "check": { "enum": ["static", "manual"] } }, "required": ["number", "check"] }
+      ],
+      "unevaluatedProperties": false
+    },
+    "genericRule": {
+      "allOf": [{ "$ref": "#/$defs/common" }],
+      "required": ["rule"],
+      "properties": {
+        "rule": { "enum": ["radius-max", "no-shadow", "no-gradient", "tokens-only-colors", "spacing-scale", "durations", "shift-max", "reduced-motion"] },
+        "value": { "type": "number" },
+        "values": { "type": "array", "items": { "type": "number" } },
+        "allowedValues": { "type": "array", "items": { "type": "number" } },
+        "circleValue": { "type": "number" },
+        "stagger": { "type": "number" },
+        "blockMax": { "type": "number" }
+      },
+      "unevaluatedProperties": false
+    }
+  }
+}

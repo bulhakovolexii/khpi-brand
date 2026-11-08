@@ -1,0 +1,23 @@
+project:
+  type: default
+
+# Єдине підключення бренду. Папка _brand/ — копія dist/quarto (npm run sync). Світла й темна версії згенеровані з токенів.
+brand:
+  light: _brand/_brand.yml
+  dark: _brand/_brand-dark.yml
+
+format:
+  html:
+    toc: true
+    theme:
+      light: default
+      dark: default
+  revealjs:
+    output-file: slides.html
+    theme: default
+  typst:
+    output-file: handout.pdf
+    papersize: a4
+    include-in-header: _brand/typst-header.typ
+    # Typst не завантажує Google Fonts: Fira Sans має бути встановлений або доданий через font-paths
+    font-paths: ['../../brandbook/Додаткові матеріали/Шрифт Fira Sans/Fira Sans']

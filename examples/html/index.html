@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="uk" data-theme="light" data-mode="doc">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>khpi-brand: чистий HTML</title>
+<link rel="stylesheet" href="../shared/fira.css">
+<link rel="stylesheet" href="../../dist/css/tokens.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<header class="top">
+  <!-- Логотип міняється разом із темою: пряма версія на світлому фоні, інверсна графітова на темному -->
+  <img class="logo logo-light" alt="НТУ «ХПІ»" src="../../assets/logos/ua/block-direct-brand.svg">
+  <img class="logo logo-dark" alt="НТУ «ХПІ»" src="../../assets/logos/ua/block-inverse-graphite.svg">
+  <div class="spacer"></div>
+  <button class="btn" id="toggle" type="button">Тема: світла</button>
+</header>
+
+<main class="page">
+  <h1>Чистий HTML: токени khpi-brand</h1>
+  <p class="lead">Мінімальна демонстрація: лише <code>dist/css/tokens.css</code>. Кольори, кегль і відступи беруться зі змінних <code>--khpi-*</code>. Перемикач вгорі міняє <code>data-theme</code> на <code>&lt;html&gt;</code>; нижче обидві теми та всі контексти видно одночасно.</p>
+
+  <h2>1. Ролі в обох темах</h2>
+  <div class="duo">
+    <section class="panel" data-theme="light" aria-label="Світла тема">
+      <h3>Світла</h3>
+      <div class="swatches" data-roles></div>
+    </section>
+    <section class="panel" data-theme="dark" aria-label="Темна тема">
+      <h3>Темна</h3>
+      <div class="swatches" data-roles></div>
+    </section>
+  </div>
+
+  <h2>2. Компоненти</h2>
+  <div class="duo">
+    <section class="panel" data-theme="light"><div class="components"></div></section>
+    <section class="panel" data-theme="dark"><div class="components"></div></section>
+  </div>
+
+  <h2>3. Діаграма (data-1…4)</h2>
+  <div class="duo">
+    <section class="panel" data-theme="light"><div class="chart"></div></section>
+    <section class="panel" data-theme="dark"><div class="chart"></div></section>
+  </div>
+
+  <h2>4. Контекст slide (1920×1080, показано 1/3)</h2>
+  <div class="duo">
+    <div class="stage" data-theme="light"><div class="canvas" data-mode="slide"><div class="slide"></div></div></div>
+    <div class="stage" data-theme="dark"><div class="canvas" data-mode="slide"><div class="slide"></div></div></div>
+  </div>
+
+  <h2>5. Контекст video (1920×1080, показано 1/3; пунктир — безпечна зона)</h2>
+  <div class="duo">
+    <div class="stage" data-theme="light"><div class="canvas" data-mode="video"><div class="video"></div></div></div>
+    <div class="stage" data-theme="dark"><div class="canvas" data-mode="video"><div class="video"></div></div></div>
+  </div>
+
+  <h2>6. Контекст print (Times New Roman 14 pt)</h2>
+  <section class="paper" data-theme="light" data-mode="print">
+    <p><strong>Наказ</strong> про затвердження робочої програми навчальної дисципліни «Основи фізики». Офіційні документи НТУ «ХПІ» оформлюються шрифтом Times New Roman, 14 pt, відповідно до вимог МОН України.</p>
+    <p>Менш формальні друковані матеріали можуть використовувати Cambria.</p>
+  </section>
+
+  <h2>7. Рух</h2>
+  <p>Поява: прозорість і зсув 12 px, <code>enter</code> 300 мс. При <code>prefers-reduced-motion</code> — одразу кінцевий стан.</p>
+  <button class="btn" id="replay" type="button">Повторити</button>
+  <div class="motion-row" id="motion"><span class="chip">1</span><span class="chip">2</span><span class="chip">3</span><span class="chip">4</span></div>
+</main>
+<script src="demo.js"></script>
+</body>
+</html>

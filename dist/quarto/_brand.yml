@@ -1,0 +1,65 @@
+# khpi-brand 0.1.0 (light). Згенеровано з tokens/ (npm run build). Не редагувати вручну.
+# Підключення: у YAML документа  brand: { light: _brand.yml, dark: _brand-dark.yml }  (або просто brand: _brand.yml).
+# Скопіюйте всю папку dist/quarto/ у проєкт (наприклад, як _brand/): логотипи лежать у logos/ поруч із цим файлом.
+# Typst і Quarto забороняють шляхи за межами кореня проєкту, тому логотипи копіюються, а не підключаються з assets/.
+meta:
+  name: НТУ «ХПІ»
+  link: https://kpi.kharkov.ua
+
+logo:
+  images:
+    emblem:
+      path: logos/emblem-direct-brand.svg
+      alt: Емблема НТУ «ХПІ»
+    block:
+      path: logos/block-direct-brand.svg
+      alt: НТУ «ХПІ»
+  small: emblem
+  medium: block
+  large: block
+
+color:
+  palette:
+    white: "#FFFFFF"
+    brand: "#A0001B"
+    yellow: "#FBBA00"
+    blue: "#3EB1C8"
+    graphite: "#2A2A2A"
+    ink: "#2A2A2A"
+    ink-muted: "#5F5F5F"
+    surface: "#FFFFFF"
+    surface-raised: "#F7F7F7"
+    brand-text: "#A0001B"
+    border: "#E5E5E5"
+  foreground: ink
+  background: surface
+  primary: brand-text
+  secondary: ink-muted
+  info: blue
+  warning: yellow
+  link: brand-text
+
+typography:
+  fonts:
+    - family: Fira Sans
+      source: google
+      weight: [400, 600]
+  base:
+    family: Fira Sans
+    weight: 400
+    size: 17px
+    line-height: 1.647
+  headings:
+    family: Fira Sans
+    weight: 600
+    color: brand-text
+  link:
+    color: brand-text
+
+# Бренд дозволяє лише ваги 400 і 600: Bootstrap за замовчуванням ставить bold = 700 / bolder
+defaults:
+  bootstrap:
+    defaults:
+      font-weight-bold: 600
+      font-weight-bolder: 600
+      headings-font-weight: 600

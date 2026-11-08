@@ -1,0 +1,5 @@
+/* Fira Sans 400 і 600 з локального комплекту брендбука (OFL). У продакшені — Google Fonts або @fontsource/fira-sans. */
+@font-face { font-family: "Fira Sans"; font-weight: 400; font-style: normal; font-display: swap;
+  src: local("Fira Sans Regular"), local("FiraSans-Regular"), url("../../brandbook/Додаткові%20матеріали/Шрифт%20Fira%20Sans/Fira%20Sans/FiraSans-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Fira Sans"; font-weight: 600; font-style: normal; font-display: swap;
+  src: local("Fira Sans SemiBold"), local("FiraSans-SemiBold"), url("../../brandbook/Додаткові%20матеріали/Шрифт%20Fira%20Sans/Fira%20Sans/FiraSans-SemiBold.ttf") format("truetype"); }

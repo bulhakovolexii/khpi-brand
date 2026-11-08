@@ -1,0 +1,87 @@
+{
+  "$description": "Похідне, відсутнє в брендбуку. Анімація пояснює, а не прикрашає: прозорість і зсув до 12px, без пружин і відскоків. prefers-reduced-motion — одразу кінцевий стан.",
+  "motion": {
+    "duration": {
+      "fast": {
+        "$type": "duration",
+        "$value": {
+          "value": 150,
+          "unit": "ms"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Швидкі реакції (hover)."
+      },
+      "base": {
+        "$type": "duration",
+        "$value": {
+          "value": 300,
+          "unit": "ms"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Стандартний перехід."
+      },
+      "slow": {
+        "$type": "duration",
+        "$value": {
+          "value": 600,
+          "unit": "ms"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Поява великого блока."
+      },
+      "stagger": {
+        "$type": "duration",
+        "$value": {
+          "value": 80,
+          "unit": "ms"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Затримка між послідовними елементами."
+      },
+      "block": {
+        "$type": "duration",
+        "$value": {
+          "value": 2400,
+          "unit": "ms"
+        },
+        "$description": "Похідне, відсутнє в брендбуку. Максимальна повна анімація блока."
+      }
+    },
+    "easing": {
+      "standard": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.2,
+          0,
+          0,
+          1
+        ],
+        "$description": "Похідне, відсутнє в брендбуку. Стандартна крива."
+      },
+      "enter": {
+        "$type": "cubicBezier",
+        "$value": [
+          0,
+          0,
+          0.2,
+          1
+        ],
+        "$description": "Похідне, відсутнє в брендбуку. Поява."
+      },
+      "exit": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.4,
+          0,
+          1,
+          1
+        ],
+        "$description": "Похідне, відсутнє в брендбуку. Зникнення."
+      }
+    },
+    "shift-max": {
+      "$type": "dimension",
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      },
+      "$description": "Похідне, відсутнє в брендбуку. Максимальний зсув при анімації."
+    }
+  }
+}

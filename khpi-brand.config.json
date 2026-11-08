@@ -1,0 +1,17 @@
+{
+  "$comment": "Конфіг brand-check для самого репозиторію пакета. Приклади перевіряються окремо (npm test).",
+  "ignore": [
+    "test/fixtures/**",
+    "brandbook/**",
+    "examples/_shots/**",
+    "examples/quarto/*.html"
+  ],
+  "ignoreDirs": [
+    "_brand",
+    "assets",
+    "index_files",
+    "slides_files",
+    "handout_files",
+    ".quarto"
+  ]
+}

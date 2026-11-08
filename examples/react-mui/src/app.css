@@ -1,0 +1,11 @@
+/* Поза MUI: лише змінні токенів */
+body { font-family: var(--khpi-type-family); }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: var(--khpi-space-24); }
+@media (max-width: 800px) { .duo { grid-template-columns: 1fr; } }
+.panel { background: var(--khpi-color-surface); color: var(--khpi-color-ink); border: 1px solid var(--khpi-color-border); border-radius: var(--khpi-radius-4); padding: var(--khpi-space-24); display: grid; gap: var(--khpi-space-16); }
+.logo-dark { display: none; }
+[data-theme="dark"] .logo-dark { display: block; }
+[data-theme="dark"] .logo-light { display: none; }
+.logo { height: var(--khpi-space-48); }
+strong { font-weight: var(--khpi-font-weight-semibold); }
+code { font-family: var(--khpi-type-family); font-weight: var(--khpi-font-weight-semibold); }

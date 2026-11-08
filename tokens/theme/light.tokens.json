@@ -1,0 +1,50 @@
+{
+  "$description": "Роль → значення для теми «light». Посилання на base. Контраст тексту до фону зазначено в описі.",
+  "color": {
+    "surface": {
+      "$type": "color",
+      "$value": "{palette.white}",
+      "$description": "Фон сторінки. Брендбук, с. 7."
+    },
+    "surface-raised": {
+      "$type": "color",
+      "$value": "{palette.derived.gray-50}",
+      "$description": "Похідне, відсутнє в брендбуку. Піднята поверхня (картка, панель)."
+    },
+    "ink": {
+      "$type": "color",
+      "$value": "{palette.graphite.100}",
+      "$description": "Основний текст. 14.4:1 до surface."
+    },
+    "ink-muted": {
+      "$type": "color",
+      "$value": "{palette.graphite.75}",
+      "$description": "Другорядний текст, графіт 75 %. 6.4:1 до surface."
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{palette.derived.gray-100}",
+      "$description": "Похідне, відсутнє в брендбуку. Тонка межа, декоративна."
+    },
+    "border-strong": {
+      "$type": "color",
+      "$value": "{palette.graphite.60}",
+      "$description": "Межа елемента керування, графіт 60 %. 4.0:1 до surface (нетекстовий елемент ≥3). Відхилення від початкового ТЗ (#AAAAAA давав 2.32:1)."
+    },
+    "brand": {
+      "$type": "color",
+      "$value": "{palette.brand.100}",
+      "$description": "Бордовий як колір тексту, посилань, ліній. 8.4:1 до surface."
+    },
+    "brand-subtle": {
+      "$type": "color",
+      "$value": "{palette.derived.brand-tint}",
+      "$description": "Похідне, відсутнє в брендбуку. Ледь помітний бордовий фон."
+    },
+    "accent-blue-text": {
+      "$type": "color",
+      "$value": "{palette.derived.blue-text}",
+      "$description": "Похідне, відсутнє в брендбуку. Блакитний для тексту. 4.7:1 до surface; на surface-raised лише 4.35:1, тому не використовувати там."
+    }
+  }
+}

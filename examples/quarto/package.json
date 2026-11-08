@@ -1,0 +1,1 @@
+{ "name": "khpi-brand-example-quarto", "private": true, "scripts": { "sync": "node -e \"require('fs').cpSync('../../dist/quarto','_brand',{recursive:true})\"", "render": "npm run sync && quarto render" } }

@@ -1,0 +1,9 @@
+_brand/
+*.html
+*_files/
+*.pdf
+*.typ
+.quarto/
+
+/.quarto/
+**/*.quarto_ipynb
