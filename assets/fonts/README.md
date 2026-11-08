@@ -19,4 +19,4 @@ Fira Sans потрібні лише дві ваги: **400** і **600** (пра�
 
 Для офлайн-матеріалів (Remotion, друк): `npm i @fontsource/fira-sans` і `import '@fontsource/fira-sans/cyrillic-400.css'`, `…/cyrillic-600.css`.
 
-Повний набір TTF від авторів брендбуку лежить у `brandbook/Додаткові матеріали/Шрифт Fira Sans/`.
+TTF для локальної роботи (Remotion, Typst, друк): `npm run fonts` у корені пакета завантажує `FiraSans-Regular.ttf` і `FiraSans-SemiBold.ttf` з репозиторію Google Fonts (`google/fonts/ofl/firasans`) у `examples/shared/fonts/`.

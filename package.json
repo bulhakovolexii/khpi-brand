@@ -25,7 +25,8 @@
     "test": "node --test --test-timeout=600000 \"test/*.test.js\"",
     "check": "node check/cli.js check",
     "lint:design": "npx --yes @google/design.md lint DESIGN.md",
-    "check:examples": "node scripts/build-examples.js --shots"
+    "check:examples": "node scripts/build-examples.js --shots",
+    "fonts": "node scripts/fetch-fonts.js"
   },
   "dependencies": {
     "ajv": "^8.17.1",

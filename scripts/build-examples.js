@@ -18,6 +18,7 @@ const run = (cmd, args, cwd) => {
 export const hasQuarto = () => spawnSync('quarto', ['--version'], { stdio: 'ignore' }).status === 0;
 
 export function buildExamples({ log = console.log } = {}) {
+  run('node', ['scripts/fetch-fonts.js'], ROOT);
   const built = [];
   for (const name of ['react-mui', 'svelte']) {
     const dir = ex(name);

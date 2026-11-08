@@ -25,13 +25,15 @@ npm test             # схема rules.json, контраст, usage, гене�
 npm run check        # brand-check самого репозиторію
 ```
 
+Шрифти для прикладів (Fira Sans 400/600, TTF) завантажуються з першоджерела — репозиторію Google Fonts — командою `npm run fonts` (її викликає й збірка прикладів); у git вони не потрапляють.
+
 `npm test` збирає приклади (потрібна мережа для `npm install` у `examples/*`, `KHPI_SKIP_EXAMPLES=1` їх пропускає), робить знімки в `examples/_shots/` (ігнорується git) і перевіряє їх в обох темах через Playwright. Quarto-приклад збирається, лише якщо встановлений `quarto` (`pip install quarto-cli`).
 
 ## Структура
 
 | Шлях | Що це |
 |---|---|
-| `brandbook/` | PDF брендбука та вихідні `.ai`/PNG/TTF від авторів |
+| `brandbook/` | PDF брендбука та вихідні `.ai`/PNG від авторів; **не в git** (`.gitignore`), потрібна лише для `scripts/extract-logos.sh` |
 | `tokens/base.tokens.json` | значення з брендбука: кольори й відтінки 75/60/40 %, шрифти, відступи, радіуси, охоронне поле логотипа |
 | `tokens/roles.tokens.json` | ролі, незалежні від теми (лише посилання на base) |
 | `tokens/theme/{light,dark}.tokens.json` | ролі, що залежать від теми |

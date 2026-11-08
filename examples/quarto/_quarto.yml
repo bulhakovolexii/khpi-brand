@@ -20,4 +20,4 @@ format:
     papersize: a4
     include-in-header: _brand/typst-header.typ
     # Typst не завантажує Google Fonts: Fira Sans має бути встановлений або доданий через font-paths
-    font-paths: ['../../brandbook/Додаткові матеріали/Шрифт Fira Sans/Fira Sans']
+    font-paths: [../shared/fonts]
